@@ -2,8 +2,8 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/CardPost.astro";
-const allPosts = await getCollection("posts");
-const pageTitle = "Posts";
+const allPosts = await getCollection("blog");
+const pageTitle = "Blog";
 ---
 
 <Layout pageTitle={pageTitle}>
