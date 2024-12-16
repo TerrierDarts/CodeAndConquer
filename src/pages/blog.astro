@@ -2,7 +2,16 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/CardPost.astro";
-const allPosts = await getCollection("blog");
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import type { CollectionEntry } from "astro:content";
+const allPosts = (
+await getCollection(
+    'blog',
+    ({ data }: CollectionEntry<'blog'>) => data.live == true
+  )
+).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
 const pageTitle = "Blog";
 ---
 
@@ -10,15 +19,16 @@ const pageTitle = "Blog";
     <div class="gif">
         <img width="300" height="259" alt="RaccoonNotesGif" src="/blog.webp" />
     </div>
-    <h2>Blog</h2>
+    <h2>Blogging</h2>
     <ul role="list" class="link-card-grid">
         {
             allPosts.map((cardPost) => (
                 <Card
-                    url={`/posts/${cardPost.slug}/`}
+                    url={`/blog/${cardPost.id}/`}
                     image={cardPost.data.image.url}
                     title={cardPost.data.title}
-                    date={cardPost.data.date}
+                    author={cardPost.data.author}
+                    date = {dayjs(cardPost.data.date).format("DD-MMMM-YYYY")}
                 />
             ))
         }

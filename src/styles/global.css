@@ -1,4 +1,5 @@
 /* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Poppins:wght@500&family=Yomogi&display=swap');
 :root {
     --background: #1e1e2e; 
     --background-light: #fdebf3;
@@ -7,8 +8,8 @@
     --text-light: #1e1e2e; 
     --text-link: #78c2ad;
     --underline: #375a7f;
-    --header: 'Pacifico', cursive;
-    --body: 'Josefin Sans', sans-serif; 
+    --header: "Playwrite DE Grund", cursive;
+    --body: "Yomogi", serif;
 }
 
 html {
@@ -17,12 +18,12 @@ html {
 }
 
 body {
-    max-width: 540px;
+    max-width: 1040px;
     margin: 0 auto;
     text-align: justify;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--header);
     font-weight: normal;
 }
@@ -31,6 +32,9 @@ h1 {
     font-size: 2.6rem;
     margin: 0;
     margin-bottom: 5px;
+    text-decoration: underline var(--underline);
+    text-decoration-thickness: 10px;
+    text-underline-offset: 6px;
 }
 
 h2 {
@@ -41,12 +45,27 @@ h2 {
     margin-bottom: 0;
 }
 
+h3 {
+    text-decoration: underline var(--underline);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
 p {
     font-family: var(--body);
     font-size: 1.1rem;
     hyphens: auto;
     line-height: 1.5;
     text-indent: 1rem;
+}
+
+quote {
+    font-family: var(--body);
+    font-size: 1.6rem;
+    margin-left: 10%;
+    font-style: italic;
+    text-decoration: underline var(--underline);
+    text-underline-offset: 6px;
 }
 
 small, li {
@@ -63,6 +82,8 @@ small, li {
 .navbar__title {
     font-family: var(--header);
     font-size: 1.3rem;
+    text-decoration: underline var(--underline);
+    text-underline-offset: 6px;
 }
 
 .navbar__menu {
@@ -173,7 +194,7 @@ small, li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1rem;
-    padding: 0;
+    padding: 15;
 }
 
 /* Button */
