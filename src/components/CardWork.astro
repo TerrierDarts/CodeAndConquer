@@ -5,10 +5,10 @@ interface Props {
     image: string;
     title: string;
     date: string;
-    author: string;
+   
 }
 
-const { url, image, title, date, author, description } = Astro.props;
+const { url, image, title, date, description } = Astro.props;
 ---
 
 <li class="card">
@@ -24,7 +24,6 @@ const { url, image, title, date, author, description } = Astro.props;
             <h3 class="card__title">{title} </h3>
             <small> {date} </small>
         <p>{description}</p>
-        <span class="badge badge--item">By: {author} </span></br>
             </div>
         
     </a>

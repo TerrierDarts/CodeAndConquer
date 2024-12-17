@@ -1,12 +1,12 @@
 ---
 live: true
-title: 'Game Dev - Month 1'
-description: 'Some Post'
-author: 'Tristen Tomczak'
-date: 2022-07-01
-tags: ["Streaming", "C#", "Streamer.bot"]
+title: 'Game Dev - Update 1'
+description: 'Explaining what Ive learnt so far Game Deving'
+author: 'TerrierDarts'
+date: 2024-12-16
+tags: ["GameDev", "gd", "godot", "gdscript"]
 image:
-    url: '/blog-post.webp'
+    url: '/image-2.webp'
     alt: 'Post Thumbnail'
 ---
 
