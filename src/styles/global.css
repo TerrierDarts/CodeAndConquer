@@ -141,12 +141,12 @@ small, li {
     padding: 0.5em 0.3em 0.3em 0.3em;
 }
 
-.badge__link {
+.badge__link, a {
     color: var(--text-link);
     text-decoration: none;
 }
 
-.badge__link:hover {
+.badge__link:hover, a:hover {
     text-decoration: underline;
 }
 

@@ -28,6 +28,8 @@ const resources = defineCollection({
       url: z.string(),
       alt: z.string()
     }),
+    homepage: z.string().optional(),
+    officaldocs: z.string().optional()
   })
 });
 
