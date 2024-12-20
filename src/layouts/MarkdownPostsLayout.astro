@@ -2,6 +2,7 @@
 import BaseLayout from "./Layout.astro";
 import dayjs from "dayjs";
 const { frontmatter } = Astro.props;
+import PostComments from "../components/PostComments.astro";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
@@ -18,4 +19,5 @@ const { frontmatter } = Astro.props;
         </li>
     </ul>
     <slot />
+    <PostComments />
 </BaseLayout>

@@ -23,6 +23,7 @@ body {
     text-align: justify;
 }
 
+
 h1, h2, h3 {
     font-family: var(--header);
     font-weight: normal;
@@ -100,6 +101,12 @@ small, li {
 .navbar__menu > a {
     margin: 0 10px;
 }
+.navbar__menu > a.disabled {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: line-through;
+    color: gray;
+  }
 
 .navbar__title > a:hover, .navbar__menu > a:hover, .navbar__menu > a:focus {
     text-decoration: underline var(--underline);
@@ -112,6 +119,19 @@ small, li {
     margin: 20px 0 0 0;
     text-align: center;
 }
+/*Code Blocks*/
+code
+{
+    font-size: 0.9rem;
+    font-family:var(--body);
+}
+pre
+{
+    border-radius: 25px;
+    padding: 1rem;
+    
+}
+
 
 /* Badge */
 .badge {
