@@ -1,5 +1,5 @@
 ---
-live: true
+live: false
 title: 'Game Dev - Update 2'
 description: 'Explaining what Ive learnt in my first game'
 author: 'TerrierDarts'
