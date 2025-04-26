@@ -1,4 +1,5 @@
 ---
+import TeamMember from '../components/TeamMember.astro';
 import Layout from '../layouts/Layout.astro';
 const pageTitle = "Code and Conquer";
 ---
@@ -37,17 +38,30 @@ const pageTitle = "Code and Conquer";
         <img class="skills__img" width="46" height="46" alt="OBS" src="https://obsproject.com/assets/images/new_icon_small-r.png"/>
         <img class="skills__img" width="46" height="46" alt="Streamerbot" src="https://streamer.bot/logo-transparent.svg"/>
     </div>
+    
     <h2>The Team</h2>
-    <h3>TerrierDarts</h3>
+    <TeamMember 
+    username="CodeWithTD" 
+    subheading="Game and Streamer.bot Extension Developer"
+    doras='https://doras.to/td' 
+    bio="Also known as TerrierDarts, I started coding in late November 2021, and since then, I’ve developed my skills in C#, along with some web development, dabbling in HTML, CSS, and JavaScript. More recently, I’ve been learning GDScript, which has been challenging but fun. I also stream on Twitch, where I show off my coding skills and offer advice on code and content creation in general. If this sounds like something you’d enjoy, feel free to stop by, hang out, and ask any questions you might have!" 
+    />
+
+    <!--h3>BitGamey</h3>
+    <TeamMember
+    username='Andilippi'
+    subheading='Extension and OBS Plug-in Developer'
+    bio='I am a developer who specializes in creating extensions and plugins for OBS. I have a passion for coding and enjoy working on projects that enhance the streaming experience. I am always looking to learn new skills and improve my craft. I also stream on Twitch, where I share my coding journey and help others learn about development. If you are interested in coding or streaming, feel free to join me on my journey!' 
+    doras='https://doras.to/andi'
+    />
+    
+    <h3>CodeWithTD (TerrierDarts)</h3>
     <span class="badge">Game and Extension Developer</span>
     <p>
         I started coding in late November 2021, and since then, I’ve developed my skills in C#, along with some web development, dabbling in HTML, CSS, and JavaScript. More recently, I’ve been learning GDScript, which has been challenging but fun.  
         
-        I also stream on <a href="https://twitch.tv/TerrierDarts" target="_blank">Twitch</a>, where I show off my coding skills and offer advice on code and content creation in general. If this sounds like something you’d enjoy, feel free to stop by, hang out, and ask any questions you might have!  
+        I also stream on <a href="https://twitch.tv/codewithtd" target="_blank">Twitch</a>, where I show off my coding skills and offer advice on code and content creation in general. If this sounds like something you’d enjoy, feel free to stop by, hang out, and ask any questions you might have!  
     </p>
-
-
-    <!--h3>BitGamey</h3>
     <span class="badge">Game Developer</span>
     <p>Some Text</p>
     <h3>Andilippi</h3>

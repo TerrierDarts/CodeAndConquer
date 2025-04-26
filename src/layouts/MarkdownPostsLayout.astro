@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 import PostComments from "../components/PostComments.astro";
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} description={frontmatter.description}>
     <div class="gif">
         <img class="pro-img" height="259" alt="RaccoonNotesGif" src={frontmatter.image.url} />
     </div>

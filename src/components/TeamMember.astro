@@ -1,0 +1,78 @@
+---
+export interface Props {
+  username: string;
+  bio: string;
+  subheading: string;
+  doras: string;
+}
+
+const { username, bio, subheading, doras } = Astro.props;
+---
+
+<div class="team-member">
+  <a href=`https://twitch.tv/${username}` target="_blank"><h2>{username}</h2></a
+  >
+  <span class="badge">{subheading}</span>
+  <p>
+    <strong>Twitch Followers:</strong>
+    
+    <span
+    >{
+        await fetch(`https://decapi.me/twitch/followcount/${username}`).then(
+            (res) => res.text()
+            )
+        }</span>
+  </p>
+  <div class="team-content">
+  <img
+  src={await fetch(`https://decapi.me/twitch/avatar/${username}`).then(
+      (res) => res.text()
+    )}
+    alt={`${username}'s profile image`}
+    class="profile-image"
+    />
+    <span class="bio">{bio}</span>
+</div>
+  <p><strong>Doras:</strong> <a href=`${doras}` target="_blank">{doras}</a></p>
+</div>
+
+<style>
+  .team-member {
+    
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem;
+  
+  }
+  .team-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h2 {
+    margin: 0.5rem 0;
+  }
+
+  h3 {
+    margin: 0.5rem 0;
+    color: #666;
+  }
+
+  .bio {
+    font-family: var(--body);
+    margin: 0.5rem 0;
+    text-align: center;
+    padding: auto;
+  }
+</style>

@@ -2,7 +2,7 @@
 live: true
 title: 'Game Dev - Update 1'
 description: 'Explaining what Ive learnt so far Game Deving'
-author: 'TerrierDarts'
+author: 'CodeWithTD'
 date: 2024-12-16
 tags: ["GameDev", "gd", "godot", "gdscript"]
 image:

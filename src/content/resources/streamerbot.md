@@ -11,7 +11,9 @@ officaldocs: 'https://docs.streamer.bot'
 ---
 ### Official Links
 
-Streamer.bot is a powerful tool for any content creator to have at there disposal. With it't built in C# compilier it gives the creator the freedom to do whatever they like and create things beyond what they believed was possible, with Streamer.bot the only limitation is ones own imagination.
+Streamer.bot is a powerful tool,  with its built-in C# compiler, Streamer.bot gives you the freedom to create, customize, and automate your content in many ways - your imagination is the only limit.
+
+Below, you'll find official Streamer.bot links, as well as a wide variety of streamers, creators, and community-driven sites offering extensions, inspiration, and tools to help take your content to the next level.
 
 - [Streamer.bot Discord](https://discord.streamer.bot/)  
 - [Streamer.bot Twitter](https://twitter.com/streamerdotbot)  
@@ -19,15 +21,16 @@ Streamer.bot is a powerful tool for any content creator to have at there disposa
 - [Streamer.bot Bluesky](https://bsky.app/profile/streamer.bot)  
 - [Streamer.bot YouTube](https://www.youtube.com/@streamerdotbot)  
 
-### Streamers to watch
-- [TerrierDarts](https://www.twitch.tv/TerrierDarts)  
-- [Andilippi](https://www.twitch.tv/Andilippi)  
+### Streamers to watch for Streamer.bot Content
+- [CodeWithTD](https://www.twitch.tv/codewithtd)  
+- [Andilippi](https://www.twitch.tv/Andilippi)
+- [ContentDelta](https://www.twitch.tv/ContentDelta)  
 - [Nutty](https://www.twitch.tv/Nutty)  
 - [OSUPhoenix](https://www.twitch.tv/OSUPhoenix)  
 - [Lyfesaver74](https://www.twitch.tv/Lyfesaver74)  
 - [Haunter56](https://www.youtube.com/@haunter56)  
 
-### YouTube Channels to Check out
+### YouTube Channels to Check out for Streamer.bot Tutorials
 - [Nutty](https://www.youtube.com/@nuttylmao)  
 - [OSUPhoenix](https://www.youtube.com/@OSUPhoenix13)  
 - [Gael Level](https://www.youtube.com/@Gael_Level)  
@@ -36,7 +39,15 @@ Streamer.bot is a powerful tool for any content creator to have at there disposa
 - [Phlare](https://www.youtube.com/@Phlare)  
 - [TerrierDarts](https://www.youtube.com/@TerrierDarts)  
 
-### Sites to Get Extensions
+### Sites to Get Streamer.bot Extensions
+*Contains a Mix of Free and Paid Extensions*
 - [Streamer.bot Official Community Extensions](https://extensions.streamer.bot/)  
 - [StreamUP](https://streamup.tips/)  
-- [TawMae’s GitHub](https://tawmae.github.io/)  
+- [TawMae’s GitHub](https://tawmae.github.io/)
+- [Nutty.GG](https://nutty.gg/en-gbp/)
+- [ContentDelta](https://contentdelta.online/en-gbp/collections/free-to-use-assets)
+- [MustachedManiac](https://mustachedmaniac.com/sb-extensions/)
+- [AlienWaifu](https://alienwaifu.com/en-gbp/collections/streamerbot-extensions)
+
+### Places to Get Work Commissioned
+- [Andilippi](https://doras.to/andi)  

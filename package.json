@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@jam-comments/astro": "^2.8.3",
-    "astro": "^5.0.5",
+    "astro": "^5.7.5",
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.7"
   }
