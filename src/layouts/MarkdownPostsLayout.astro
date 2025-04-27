@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "./Layout.astro";
-import PageViews from "../components/PageViews.astro";
 import dayjs from "dayjs";
 const { frontmatter } = Astro.props;
 import PostComments from "../components/PostComments.astro";
+import PageView from "../components/PageView.astro";
+
 ---
 
 <BaseLayout pageTitle={frontmatter.title} description={frontmatter.description}>
@@ -25,7 +26,7 @@ import PostComments from "../components/PostComments.astro";
       {dayjs(frontmatter.date).format("DD-MMMM-YYYY")}
     </li>
     <li>
-      <PageViews/>
+      <PageView />
       
     </li>
   </ul>

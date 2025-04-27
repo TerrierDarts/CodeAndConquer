@@ -1,0 +1,16 @@
+---
+// src/components/PageView.astro
+export const prerender = false; // Not needed if you're in 'server' mode
+
+let counter = 0;
+if (Astro.cookies.has('pageView')) {
+  const cookie = Astro.cookies.get('pageView');
+  const value = cookie?.number();
+  if (value !== undefined && !isNaN(value)) counter = value + 1;
+}
+
+Astro.cookies.set('pageView', String(counter));
+---
+<div class="page-view-counter">
+    <span class="badge badge--item">PAGE VIEWS:</span>{counter} 
+</div>
