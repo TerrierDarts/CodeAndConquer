@@ -3,6 +3,7 @@ import BaseLayout from "./Layout.astro";
 import dayjs from "dayjs";
 const { frontmatter } = Astro.props;
 import PostComments from "../components/PostComments.astro";
+import PageViews from "../components/PageViews.astro";
 ---
 
 <BaseLayout pageTitle={frontmatter.title} description={frontmatter.description}>
