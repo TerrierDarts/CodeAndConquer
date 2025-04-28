@@ -1,4 +1,22 @@
 ---
+export const prerender = true;
+import { getEntry } from 'astro:content';
+
+// Get the slug from the URL
+const { slug } = Astro.params;
+
+// Handle case where slug is undefined
+if (!slug) {
+  return Astro.redirect('/404');
+}
+
+// Try to get the entry
+const entry = await getEntry('blog', slug);
+
+// Check if entry exists before rendering
+if (!entry) {
+  return Astro.redirect('/404');
+}
 import { getCollection, render } from 'astro:content';
 import MarkdownPostLayout from '../../layouts/MarkdownPostsLayout.astro';
 

@@ -1,0 +1,31 @@
+---
+const pathname = Astro.url.pathname.replace('/blog/', '').replace('/', '');
+---
+
+<span class="badge badge--item">PAGE VIEWS:</span> <span id="views">...</span>
+
+<script type="module">
+  const pathname = window.location.pathname.replace('/blog/', '').replace('/', '');
+
+  async function updateViews() {
+    try {
+      await fetch('/api/views.json', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pathname }),
+      });
+
+      const res = await fetch(`/api/views.json?pathname=${pathname}`);
+      const data = await res.json();
+
+      const viewsElement = document.getElementById('views');
+      if (viewsElement) {
+        viewsElement.textContent = data.views;
+      }
+    } catch (err) {
+      console.error('Failed to update views', err);
+    }
+  }
+
+  updateViews();
+</script>
