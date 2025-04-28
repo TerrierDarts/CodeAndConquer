@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const viewsFile = path.resolve('src/data/page-views.json');
+const viewsFile = path.resolve('././data/page-views.json');
 
 export async function GET({ url }: { url: URL }) {
   const pathname = url.searchParams.get('pathname');
@@ -42,5 +42,6 @@ async function readViews() {
 }
 
 async function saveViews(data: any) {
+  console.log('viewsFile', viewsFile);
   await fs.writeFile(viewsFile, JSON.stringify(data, null, 2));
 }

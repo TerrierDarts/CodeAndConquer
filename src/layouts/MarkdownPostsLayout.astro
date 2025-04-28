@@ -10,13 +10,14 @@ import PageViews from "../components/PageViews.astro";
 <BaseLayout pageTitle={frontmatter.title} description={frontmatter.description}>
   <div class="gif">
     <img
-      class="pro-img"
-      height="259"
-      alt="RaccoonNotesGif"
-      src={frontmatter.image.url}
+    class="pro-img"
+    height="259"
+    alt="RaccoonNotesGif"
+    src={frontmatter.image.url}
     />
   </div>
-  <h2 style="text-decoration:none;">{frontmatter.title}</h2>
+  <h2>{frontmatter.title}</h2>
+
   <ul class="badge__list">
     <li>
       <span class="badge badge--item">AUTHOR:</span>{frontmatter.author}

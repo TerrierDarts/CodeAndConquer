@@ -9,7 +9,7 @@ image:
     url: '/blogThumbs/game_dev_1.jpg'
     alt: 'Post Thumbnail'
 ---
-
+---
 ### My Journey into Game Development: Update 1  
 
 I’ve decided to take on the challenge of learning how to make a game. In this first update, I’m going to share my thoughts and feelings from the past month to month and a half of this journey, along with a bit of background about what came before I actually started developing. Future updates will dive deeper into what I’ve learned, the problems I’ve faced, and the steps I took to overcome them.  
@@ -29,6 +29,8 @@ Another thing I didn’t spend much time worrying about was which engine to use.
 > **If you’re new, don’t build your own engine. Learn how to walk before you try to run.**  
 
 I chose Godot mainly because, on the surface, it looked more user-friendly and so far, that’s proven true. I’ve hit plenty of roadblocks, but I’ve managed to overcome most of them. One of the most frustrating lessons I’ve learned is this: sometimes when I want to do A and B, I know how to do A, and I know how to do B, but I just can’t figure out how to make A and B work together. However, for me, that’s all part of the fun.  
+
+---
 
 ### The State of My Game  
 

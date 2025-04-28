@@ -9,7 +9,7 @@ image:
     url: '/blogThumbs/game_dev_2.png'
     alt: 'Post Thumbnail'
 ---
-
+---
 ### The What and the Why
 
 As the title suggests, I’ve finally finished my game! While there were some bugs early on, I believe I’ve fixed most of them. Releasing this game is a huge milestone in my game dev journey — everyone remembers their first. It might not be to everyone's taste, and of course, people will have creative criticism, but overall, the initial feedback has been really positive, which is great to see. 
@@ -24,15 +24,21 @@ As for why I built this game — the short answer is because I wanted to. But th
   <img class="pro-img" width="500px" height="281" src="/blogImages/gameupdate2image1.png" alt="First Image" />  
 </div> 
 
+---
+
 ### What's Next for Me
 
 In short: another project! I’m not sure what it will be yet, but like this one, it’ll be focused on learning, not just making something impressive. Right now, building skills and expanding my knowledge base is the priority.
+
+---
 
 ### Lessons I’ll Take Into My Next Project
 
 - Proper naming schemes are incredibly helpful.
 - Having confidence in what I’m doing makes a big difference.
 - With more experience in GDScript, I hope to write cleaner, more efficient code.
+
+---
 
 ### Final Thoughts
 

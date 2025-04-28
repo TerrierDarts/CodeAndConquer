@@ -5,10 +5,11 @@ import Card from "../components/CardPost.astro";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import type { CollectionEntry } from "astro:content";
+import { date } from "astro:schema";
 const allPosts = (
 await getCollection(
     'blog',
-    ({ data }: CollectionEntry<'blog'>) => data.live == true
+    ({ data }: CollectionEntry<'blog'>) => data.live == true && new Date(data.date) <= new Date()
   )
 ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 

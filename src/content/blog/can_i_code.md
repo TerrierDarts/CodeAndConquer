@@ -9,20 +9,20 @@ image:
     url: '/blogThumbs/learn_to_code.png'
     alt: 'Post Thumbnail'
 ---
-
-# Yes.
+---
+## Yes.
 
 I mean, that’s the short answer — and the longer answer is still yes — but there are more layers to learning how to code. So let’s break it down.
 
 ---
 
-## Picking a Starting Language
+### Picking a Starting Language
 
 Choosing a language to learn is the first step — it kind of goes without saying. It’s like learning to speak a second language: you need to know *which* one you want to learn. I personally chose C# because I wanted to develop extensions for Streamer.bot. But for you, it might be something entirely different — and that’s totally fine. Your reasons may vary, but the journey is exactly the same.
 
 ---
 
-## Opportunity is the Key to Learning
+### Opportunity is the Key to Learning
 
 You're not going to learn to code just by reading documentation, watching videos, or listening to your favourite streamer talk about what they’re building. That might sound ideal, but it’s not how it works.
 
@@ -34,7 +34,7 @@ I was once someone who couldn’t code at all — and now I feel confident in ac
 
 ---
 
-## Tips I Wish I Knew Earlier
+### Tips I Wish I Knew Earlier
 
 - **Logging is your best friend** 
  Knowing what’s happening in your code — especially what values your variables hold at each step — is an amazing way to learn. Following the logic all the way through is how I solve 90% of my problems.
@@ -74,7 +74,7 @@ I was once someone who couldn’t code at all — and now I feel confident in ac
 
 ---
 
-## Final Thoughts
+### Final Thoughts
 
 You can always learn to code — just don’t expect to start by writing massive, impressive scripts overnight. It’s a learning process, so enjoy the journey. It *will* be tough at times, but when you finally have something you’re proud of, you’ll know the struggle was worth it.
 

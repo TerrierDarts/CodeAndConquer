@@ -9,6 +9,7 @@ image:
 homepage: 'https://streamer.bot'
 officaldocs: 'https://docs.streamer.bot'
 ---
+---
 ### Official Links
 
 Streamer.bot is a powerful tool,  with its built-in C# compiler, Streamer.bot gives you the freedom to create, customize, and automate your content in many ways - your imagination is the only limit.
@@ -21,6 +22,8 @@ Below, you'll find official Streamer.bot links, as well as a wide variety of str
 - [Streamer.bot Bluesky](https://bsky.app/profile/streamer.bot)  
 - [Streamer.bot YouTube](https://www.youtube.com/@streamerdotbot)  
 
+---
+
 ### Streamers to watch for Streamer.bot Content
 - [CodeWithTD](https://www.twitch.tv/codewithtd)  
 - [Andilippi](https://www.twitch.tv/Andilippi)
@@ -30,6 +33,7 @@ Below, you'll find official Streamer.bot links, as well as a wide variety of str
 - [Lyfesaver74](https://www.twitch.tv/Lyfesaver74)  
 - [Haunter56](https://www.youtube.com/@haunter56)  
 
+---
 ### YouTube Channels to Check out for Streamer.bot Tutorials
 - [Nutty](https://www.youtube.com/@nuttylmao)  
 - [OSUPhoenix](https://www.youtube.com/@OSUPhoenix13)  
@@ -38,7 +42,7 @@ Below, you'll find official Streamer.bot links, as well as a wide variety of str
 - [BeardedInk](https://www.youtube.com/@beardedink)  
 - [Phlare](https://www.youtube.com/@Phlare)  
 - [TerrierDarts](https://www.youtube.com/@TerrierDarts)  
-
+---
 ### Sites to Get Streamer.bot Extensions
 *Contains a Mix of Free and Paid Extensions*
 - [Streamer.bot Official Community Extensions](https://extensions.streamer.bot/)  
@@ -48,6 +52,6 @@ Below, you'll find official Streamer.bot links, as well as a wide variety of str
 - [ContentDelta](https://contentdelta.online/en-gbp/collections/free-to-use-assets)
 - [MustachedManiac](https://mustachedmaniac.com/sb-extensions/)
 - [AlienWaifu](https://alienwaifu.com/en-gbp/collections/streamerbot-extensions)
-
+---
 ### Places to Get Work Commissioned
 - [Andilippi](https://doras.to/andi)  
