@@ -50,6 +50,8 @@ h3 {
     text-decoration: underline var(--underline);
     text-decoration-thickness: 2px;
     text-underline-offset: 6px;
+    
+
 }
 
 p {

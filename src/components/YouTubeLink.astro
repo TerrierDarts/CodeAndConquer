@@ -1,0 +1,34 @@
+---
+export interface Props {
+  username: string;
+}
+
+const { username } = Astro.props;
+
+
+---
+
+<a href={`https://youtube.com/@${username}`} target="_blank">
+  <span>
+    {username} 
+ 
+  </span>
+</a>
+
+
+<style>
+  a {
+    text-decoration: none;
+   
+  }
+  span {
+    
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:visited {
+    color: inherit;
+  }
+</style>

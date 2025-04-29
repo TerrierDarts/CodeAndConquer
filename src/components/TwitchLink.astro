@@ -1,0 +1,45 @@
+---
+export interface Props {
+  username: string;
+}
+
+const { username } = Astro.props;
+
+async function getLiveStatus(username: string) {
+  const res = await fetch(`https://decapi.me/twitch/uptime/${username}`);
+  const text = await res.text();
+
+  if (!text.includes("offline")) {
+    return `<span style="color:red;font-weight:bold;">&#9679;</span> Live Now`;
+  } else {
+    return "";
+  }
+}
+
+const liveStatus = await getLiveStatus(username);
+---
+
+<a href={`https://twitch.tv/${username}`} target="_blank">
+  <span>
+    {username} 
+    <span set:html={liveStatus} />
+  </span>
+</a>
+
+
+<style>
+  a {
+    text-decoration: none;
+   
+  }
+  span {
+    
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:visited {
+    color: inherit;
+  }
+</style>
