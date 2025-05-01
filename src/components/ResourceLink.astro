@@ -1,0 +1,62 @@
+---
+export interface Props {
+  title: string;
+  link: string;
+}
+
+const { title, link } = Astro.props;
+---
+
+<div class="twitch-card">
+    <img
+      src={`https://image.thum.io/get/${link}`}
+      alt={`${title}'s profile image`}
+      class="profile-image"
+    />
+    <div class="card-content">
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <span>{title}</span>
+      </a>
+    </div>
+  </div>
+  
+  <style>
+    .twitch-card {
+      display: flex;
+      align-items: left;
+      background: #2c2f48;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem auto;
+     
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+  
+    .twitch-card:hover {
+      background-color: #3a3e66;
+      transform: scale(1.02);
+    }
+  
+    .profile-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid #78c2ad;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+  
+    .card-content a {
+      color: white;
+      font-family: var(--body);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+  
+    .card-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  

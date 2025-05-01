@@ -1,0 +1,58 @@
+---
+const { type, href } = Astro.props;
+
+const platforms = {
+  Discord: {
+    color: '#5865F2',
+    icon: 'lucide:users',
+  },
+  Twitter: {
+    color: '#1DA1F2',
+    icon: 'lucide:twitter',
+  },
+  Reddit: {
+    color: '#FF4500',
+    icon: 'lucide:pen',
+  },
+  BlueSky: {
+    color: '#0085FF',
+    icon: 'lucide:cloud', // closest match, unless you have a BlueSky icon
+  },
+  Twitch: {
+    color: '#9146FF',
+    icon: 'lucide:twitch',
+  },
+  Youtube: {
+    color: '#FF0000',
+    icon: 'lucide:youtube',
+  },
+};
+
+const platform = platforms[type] ?? {
+  color: '#999',
+  icon: 'lucide:link',
+};
+---
+
+<a href={`https://${href}`} target="_blank" rel="noopener noreferrer" style={`color: ${platform.color}`} class="inline-flex items-center gap-2 font-medium hover:underline transition-colors duration-200">
+  <iconify-icon icon={platform.icon} width="20" height="20"></iconify-icon>
+  <span>{type}</span>
+</a>
+<br/>
+
+<style>
+    a {
+    text-decoration: none;
+    font-family: var(--body);
+   
+  }
+    span {
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    a:visited {
+        color: inherit;
+    }
+</style>

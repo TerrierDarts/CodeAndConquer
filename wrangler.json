@@ -1,0 +1,11 @@
+  {
+    "name": "codeandconquer",
+    "compatibility_date": "2023-10-30",
+    "kv_namespaces": [
+      {
+        "binding": "SESSION",
+        "id": "864f8f7891794c01b0e05cbcc5acee54"
+      }
+    ],
+      "pages_build_output_dir": "dist"
+  }

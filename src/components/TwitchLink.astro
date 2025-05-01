@@ -11,7 +11,7 @@ async function getLiveStatus(username: string) {
   const text = await res.text();
 
   if (!text.includes("offline")) {
-    return `<span style="color:red;font-weight:bold;">&#9679;</span> Live Now`;
+    return `<span>&#9679; Live Now</span>`;
   } else {
     return "";
   }
@@ -20,27 +20,96 @@ async function getLiveStatus(username: string) {
 const liveStatus = await getLiveStatus(username);
 ---
 
-<a href={`https://twitch.tv/${username}`} target="_blank">
-  <span>
-    {username} 
-    <span set:html={liveStatus} />
-  </span>
-</a>
-
+<div class="twitch-card">
+  <img
+    src={await fetch(`https://decapi.me/twitch/avatar/${username}`).then(
+      (res) => res.text()
+    )}
+    alt={`${username}'s profile image`}
+    class="profile-image"
+  />
+  <a href={`https://twitch.tv/${username}`} target="_blank">
+    <span>
+      {username}
+      <br />
+      
+        <strong>Twitch Followers:</strong>
+        
+        <span
+        >{
+            await fetch(`https://decapi.me/twitch/followcount/${username}`).then(
+                (res) => res.text()
+                )
+            }</span>
+      <br />
+      <span class="live-dot" set:html={liveStatus} />
+    </span>
+  </a>
+</div>
 
 <style>
+ .live-dot {
+  color: red;
+  font-weight: bold;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
   a {
     text-decoration: none;
-   
+    font-family: var(--body);
   }
   span {
-    
     font-weight: bold;
   }
   a:hover {
     text-decoration: underline;
   }
-  a:visited {
-    color: inherit;
+  .twitch-card {
+    display: flex;
+    align-items: left;
+    background: #2c2f48;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem auto;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition:
+      transform 0.2s ease,
+      background-color 0.3s ease;
   }
+
+  .twitch-card:hover {
+    background-color: #3a3e66;
+    transform: scale(1.02);
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #78c2ad;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+
+  .card-content a {
+    color: white;
+    font-family: var(--body);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  .card-content a:hover {
+    text-decoration: underline;
+  }
+
 </style>

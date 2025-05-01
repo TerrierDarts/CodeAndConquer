@@ -6,6 +6,7 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
     integrations: [mdx()],
     output: 'server',
-    adapter: cloudflare(),
+    adapter: cloudflare({
+        imageService: 'cloudflare'  // Use Cloudflare's image service instead
+      })
 });
-

@@ -1,0 +1,201 @@
+---
+const username = Astro.props.username;
+
+console.log("Starting Twitch card render for user:", username);
+
+const getAccessToken = async () => {
+  try {
+    const res = await fetch("https://id.twitch.tv/oauth2/token", {
+      method: "POST",
+      body: new URLSearchParams({
+        client_id: import.meta.env.TWITCH_CLIENT_ID,
+        client_secret: import.meta.env.TWITCH_CLIENT_SECRET,
+        grant_type: "client_credentials",
+      }),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`Token request failed: ${res.status} ${errText}`);
+    }
+
+    const json = await res.json();
+    console.log("Access token received");
+    return json.access_token;
+  } catch (err) {
+    console.error("Error getting access token:", err);
+    return null;
+  }
+};
+
+const accessToken = await getAccessToken();
+
+if (!accessToken) {
+  console.error("No access token; skipping Twitch data fetch.");
+  throw new Error("Twitch API auth failed.");
+}
+
+const twitchHeaders = {
+  Authorization: `Bearer ${accessToken}`,
+  "Client-Id": import.meta.env.TWITCH_CLIENT_ID,
+};
+
+let user;
+try {
+  const userRes = await fetch(
+    `https://api.twitch.tv/helix/users?login=${username}`,
+    {
+      headers: twitchHeaders,
+    }
+  );
+
+  const userData = await userRes.json();
+  user = userData.data?.[0];
+  console.log("User data:", user);
+} catch (err) {
+  console.error("Failed to fetch user data:", err);
+}
+
+let isLive = false;
+try {
+  const streamRes = await fetch(
+    `https://api.twitch.tv/helix/streams?user_id=${user?.id}`,
+    {
+      headers: twitchHeaders,
+    }
+  );
+  const streamData = await streamRes.json();
+  isLive = streamData.data?.length > 0;
+  console.log("Stream data:", streamData);
+} catch (err) {
+  console.error("Failed to fetch stream data:", err);
+}
+
+let followData = { total: 0 };
+try {
+  const followRes = await fetch(
+    `https://api.twitch.tv/helix/channels/followers?broadcaster_id=${user?.id}`,
+    {
+      headers: twitchHeaders,
+    }
+  );
+  followData = await followRes.json();
+  console.log("Follow data:", followData);
+} catch (err) {
+  console.error("Failed to fetch follow count:", err);
+}
+---
+
+{
+  user ? (
+    <a
+      href={`https://twitch.tv/${user.login}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="twitch-card">
+        <img
+          src={user.profile_image_url}
+          alt={`${user.display_name}'s profile`}
+          class="profile-image"
+        />
+        <div>
+          <strong class="name">{user.display_name}</strong> -{" "}
+          <span class="followers">Followers: {followData.total}</span>
+          <br />
+          <span class="description">{user.description}</i>
+          <br />
+          <span class={isLive ? "live" : ""}>{isLive ? "🔴 LIVE" : ""}</span>
+        </div>
+      </div>
+    </a>
+  ) : (
+    <p>Could not load Twitch data for {username}.</p>
+  )
+}
+
+<style>
+  .live-dot {
+    color: red;
+    font-weight: bold;
+    animation: blink 3s infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  body {
+    text-decoration: none;
+    font-family: var(--body);
+  }
+  span {
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .description {
+    font-style: italic;
+    color: white;
+  }
+  .followers {
+    color: #ffffff;
+  }
+  .name {
+    color: #78c2ad;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .twitch-card {
+    display: flex;
+    align-items: left;
+    background: #2c2f48;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem auto;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition:
+      transform 0.2s ease,
+      background-color 0.3s ease;
+  }
+
+  .twitch-card:hover {
+    background-color: #3a3e66;
+    transform: scale(1.02);
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #78c2ad;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+
+  .card-content a {
+    color: white;
+    font-family: var(--body);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  .card-content a:hover {
+    text-decoration: none;
+  }
+
+  .live {
+    color: red;
+    font-weight: bold;
+    animation: blink 3s infinite;
+  }
+</style>

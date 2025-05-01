@@ -1,34 +1,59 @@
 ---
 export interface Props {
   username: string;
+  twitchName: string;
 }
 
-const { username } = Astro.props;
-
-
+const { username , twitchName } = Astro.props;
 ---
 
-<a href={`https://youtube.com/@${username}`} target="_blank">
-  <span>
-    {username} 
- 
-  </span>
-</a>
 
 
-<style>
-  a {
+<div class="twitch-link">
+  <img
+  src={await fetch(`https://decapi.me/twitch/avatar/${twitchName}`).then(
+    (res) => res.text()
+  )}
+    alt={`${username}'s profile image`}
+    class="profile-image"
+    />
+  <a href={`https://youtube.com/@${username}`} target="_blank">
+    <span>
+      {username}
+    </span>
+  </a>
+</div>
+
+
+  <style > a {
     text-decoration: none;
-   
+    font-family: var(--body);
   }
   span {
-    
     font-weight: bold;
   }
   a:hover {
     text-decoration: underline;
   }
-  a:visited {
-    color: inherit;
+
+  .profile-image {
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    border: 3px #78c2ad solid;
+    object-fit: cover;
+    margin: 1rem;
+  }
+  .twitch-link {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 100%;
+    margin: auto;
+  }
+  .twitch-link:hover {
+    background-color: #221960;
+    color: white;
   }
 </style>

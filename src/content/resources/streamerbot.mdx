@@ -9,8 +9,10 @@ image:
 homepage: 'https://streamer.bot'
 officaldocs: 'https://docs.streamer.bot'
 ---
-import TwitchLink from '../../components/TwitchLink.astro'
+import TwitchCard from '../../components/TwitchCard.astro'
 import YouTubeLink from '../../components/YouTubeLink.astro'
+import SocialLink from '../../components/SocialLink.astro'
+import ResourceLink from '../../components/ResourceLink.astro'
 
 
 ---
@@ -20,43 +22,47 @@ Streamer.bot is a powerful tool,  with its built-in C# compiler, Streamer.bot gi
 
 Below, you'll find official Streamer.bot links, as well as a wide variety of streamers, creators, and community-driven sites offering extensions, inspiration, and tools to help take your content to the next level.
 
-- [Streamer.bot Discord](https://discord.streamer.bot/)  
-- [Streamer.bot Twitter](https://twitter.com/streamerdotbot)  
-- [Streamer.bot Reddit](https://reddit.com/r/streamerbot)  
-- [Streamer.bot Bluesky](https://bsky.app/profile/streamer.bot)  
-- [Streamer.bot YouTube](https://www.youtube.com/@streamerdotbot)  
+<SocialLink type="Discord" href="discord.streamer.bot" />
+<SocialLink type="Twitter" href="twitter.com/streamerdotbot" />
+<SocialLink type="Reddit" href="reddit.com/r/streamerbot" />
+<SocialLink type="BlueSky" href="bsky.app/profile/streamer.bot" />
+<SocialLink type="Youtube" href="youtube.com/@streamerdotbot" />
+<SocialLink type="Twitch" href="twitch.tv/streamerdotbot" />
 
 ---
 
 ### Streamers to watch for Streamer.bot Content
 All these streamers are active in the Streamer.bot community and have a wealth of knowledge to share. They often stream their work, so you can learn from them and ask any questions you might have.
-- <TwitchLink username="CodeWithTd"/>
-- <TwitchLink username="Andilippi"/>
-- <TwitchLink username="ContentDelta"/>
-- <TwitchLink username="Nutty"/>
-- <TwitchLink username="OSUPhoenix"/>
-- <TwitchLink username="Lyfesaver74"/>
-- <YouTubeLink username="haunter56"/>  
+<TwitchCard username="CodeWithTd"/> 
+<TwitchCard username="Andilippi"/>
+<TwitchCard username="ContentDelta"/>
+<TwitchCard username="Nutty"/>
+<TwitchCard username="OSUPhoenix"/>
+<TwitchCard username="Lyfesaver74"/>
 
 ---
 ### YouTube Channels to Check out for Streamer.bot Tutorials
-- [Nutty](https://www.youtube.com/@nuttylmao)  
-- [OSUPhoenix](https://www.youtube.com/@OSUPhoenix13)  
-- [Gael Level](https://www.youtube.com/@Gael_Level)  
-- [ContentDelta](https://www.youtube.com/@ContentDelta)  
-- [BeardedInk](https://www.youtube.com/@beardedink)  
-- [Phlare](https://www.youtube.com/@Phlare)  
-- [TerrierDarts](https://www.youtube.com/@TerrierDarts)  
+<YouTubeLink username="haunter56" twitchName="haunter_56"/>  
+<YouTubeLink username="nuttylmao" twitchName="nutty"/>
+<YouTubeLink username="OSUPhoenix13" twitchName="osuphoenix"/>
+<YouTubeLink username="Gael_Level" twitchName="gaellevel"/>
+<YouTubeLink username="ContentDelta" twitchName="contentDelta" />
+<YouTubeLink username="beardedink" twitchName="beardedink"/>
+<YouTubeLink username="Phlare" twitchName="Phlare"/>
+<YouTubeLink username="TerrierDarts" twitchName="CodeWithTD"/>
+<YouTubeLink username="Andilippi"  twitchName="Andilippi"/>
+ 
 ---
 ### Sites to Get Streamer.bot Extensions
 *Contains a Mix of Free and Paid Extensions*
-- [Streamer.bot Official Community Extensions](https://extensions.streamer.bot/)  
-- [StreamUP](https://streamup.tips/)  
-- [TawMae’s GitHub](https://tawmae.github.io/)
-- [Nutty.GG](https://nutty.gg/en-gbp/)
-- [ContentDelta](https://contentdelta.online/en-gbp/collections/free-to-use-assets)
-- [MustachedManiac](https://mustachedmaniac.com/sb-extensions/)
-- [AlienWaifu](https://alienwaifu.com/en-gbp/collections/streamerbot-extensions)
+<ResourceLink title="Streamer.bot Official Community Extensions" link="https://extensions.streamer.bot/" />
+<ResourceLink title="StreamUP" link="https://streamup.tips/" />
+<ResourceLink title="TawMae’s GithubIO" link="https://tawmae.xyz/" />
+<ResourceLink title="Nutty.GG" link="https://nutty.gg/en-gbp/" />
+<ResourceLink title="ContentDelta" link="https://contentdelta.online/en-gbp/collections/free-to-use-assets" />
+<ResourceLink title="MustachedManiac" link="https://mustachedmaniac.com/sb-extensions/" />
+<ResourceLink title="AlienWaifu" link="https://alienwaifu.com/en-gbp/collections/streamerbot-extensions" />
+
 ---
 ### Places to Get Work Commissioned
 - [Andilippi](https://doras.to/andi)  
