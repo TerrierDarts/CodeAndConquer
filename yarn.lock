@@ -20,16 +20,16 @@
     kleur "^4.1.5"
     yargs "^17.7.2"
 
-"@astrojs/cloudflare@^12.5.1":
-  version "12.5.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/cloudflare/-/cloudflare-12.5.1.tgz#fe8383bdba7b62b6c59f0db904f1ea3af6e5a5ee"
-  integrity sha512-J7LpDw7G/u/7/+XLx/zNFRwSJxPb+CimFSdJrQsHEXSzheJnqL8lExfiG/P94aJyEMa1aw5R5ECFqnEjdbbjRw==
+"@astrojs/cloudflare@12.5.2":
+  version "12.5.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/cloudflare/-/cloudflare-12.5.2.tgz#076226ca54c25ffa056d322a56eccda8b7fca340"
+  integrity sha512-zhqBJmy0zXqpniWuAbpWY6CCNdkq3Olm2LMHv0lryvY6CUFcZbDzTK225zgz//r5zPj8ty1qbvWRnXgCaiaaYQ==
   dependencies:
     "@astrojs/internal-helpers" "0.6.1"
     "@astrojs/underscore-redirects" "0.6.1"
     "@cloudflare/workers-types" "^4.20250327.0"
     tinyglobby "^0.2.12"
-    vite "^6.2.6"
+    vite "^6.3.4"
     wrangler "^4.5.1"
 
 "@astrojs/compiler@^2.10.3", "@astrojs/compiler@^2.11.0":
@@ -37,12 +37,12 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.11.0.tgz#4f9d92c64848bcf0d2ff6e7fd0dc3ce47caa0cd2"
   integrity sha512-zZOO7i+JhojO8qmlyR/URui6LyfHJY6m+L9nwyX5GiKD78YoRaZ5tzz6X0fkl+5bD3uwlDHayf6Oe8Fu36RKNg==
 
-"@astrojs/db@^0.14.12":
-  version "0.14.12"
-  resolved "https://registry.yarnpkg.com/@astrojs/db/-/db-0.14.12.tgz#861c4ce9e5a9726c45f4e14b1ef2b0c689028963"
-  integrity sha512-pvRaFOVQOpjfNgu0LSavkSNOYxxcqpICkqNzCCbRa+bCGJ1/22eQ65zUYrP+ALqAP9Uo7XGQwJJSdfcOFT54tg==
+"@astrojs/db@0.14.13":
+  version "0.14.13"
+  resolved "https://registry.yarnpkg.com/@astrojs/db/-/db-0.14.13.tgz#c432ba88f86a671ab98ed5702b6f81815d6a7f48"
+  integrity sha512-o8gB82Go9vp6W5i2aYxGlQPR0vrIiB/VxOnpHNVQhyXKw/6fR8SVV2CeATFvmsI2WcTSCNyXsz7Kzdgtr2e+DA==
   dependencies:
-    "@astrojs/studio" "0.1.8"
+    "@astrojs/studio" "0.1.9"
     "@libsql/client" "^0.15.2"
     async-listen "^3.1.0"
     deep-diff "^1.0.2"
@@ -112,10 +112,10 @@
     unist-util-visit-parents "^6.0.1"
     vfile "^6.0.3"
 
-"@astrojs/mdx@^4.2.5":
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-4.2.5.tgz#191e99e1e2535e9543a374aa6152069351871c41"
-  integrity sha512-iKGu9GssmypLWf6ycJu6OYa9E3W16KA2y3ApBPlZpz1pwR70xXEr2XugQUwxGfFCI2KcZLIND/9FdKM7ZXVffA==
+"@astrojs/mdx@4.2.6":
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-4.2.6.tgz#ef32f4184770fbb801a2e3af6640fb4170025640"
+  integrity sha512-0i/GmOm6d0qq1/SCfcUgY/IjDc/bS0i42u7h85TkPFBmlFOcBZfkYhR5iyz6hZLwidvJOEq5yGfzt9B1Azku4w==
   dependencies:
     "@astrojs/markdown-remark" "6.3.1"
     "@mdx-js/mdx" "^3.1.0"
@@ -147,10 +147,10 @@
   dependencies:
     prismjs "^1.29.0"
 
-"@astrojs/studio@0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@astrojs/studio/-/studio-0.1.8.tgz#32c050aea136843b32930f93eb97fc187d9cada5"
-  integrity sha512-HRaBMorTQPgyExlTUBgVUpX9HRnOzyPHg67yoFRpy9/bj5qZ8zKz+Qe9cTSwtEko65DWrj5OfG9CoEvS9FFT3Q==
+"@astrojs/studio@0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@astrojs/studio/-/studio-0.1.9.tgz#cf107b8e133d08c191b57a60c4ab53904cdc694a"
+  integrity sha512-pMZ+gYVC2XAnHfzp/or9tyEor8yKJyTUflm6oQJAad5+4z0d/033mhJVCU4kKDXXKovAGB4bcHgyW97ixCE6fQ==
   dependencies:
     ci-info "^4.2.0"
     kleur "^4.1.5"
@@ -1127,6 +1127,13 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.7.tgz#4158d3105276773d5b7695cd4834b1722e4f37a8"
   integrity sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==
 
+"@types/fontkit@^2.0.8":
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@types/fontkit/-/fontkit-2.0.8.tgz#59725be650e68acbbff6df9f3fccbd54d9ef7f4c"
+  integrity sha512-wN+8bYxIpJf+5oZdrdtaX04qUuWHcKxcDEgRS9Qm9ZClSHjzEn13SxUC+5eRM+4yXIeTYk8mTzLAWGF64847ew==
+  dependencies:
+    "@types/node" "*"
+
 "@types/hast@^3.0.0", "@types/hast@^3.0.4":
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/@types/hast/-/hast-3.0.4.tgz#1d6b39993b82cea6ad783945b0508c25903e15aa"
@@ -1359,7 +1366,75 @@ astring@^1.8.0:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.9.0.tgz#cc73e6062a7eb03e7d19c22d8b0b3451fd9bfeef"
   integrity sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==
 
-astro@^5.2.5, astro@^5.7.5:
+astro@5.7.12:
+  version "5.7.12"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-5.7.12.tgz#7e47d7330d7521e8318319b7cd439aca7bb2924f"
+  integrity sha512-UQOItiZz2hcv9PlHTQ6dNqFDIVNPnmwk6eyAjJqPE9O8EDHZK2JKtTRD0CBFN2Uqr0RE0TWP2gqDpLfsa5dJEA==
+  dependencies:
+    "@astrojs/compiler" "^2.11.0"
+    "@astrojs/internal-helpers" "0.6.1"
+    "@astrojs/markdown-remark" "6.3.1"
+    "@astrojs/telemetry" "3.2.1"
+    "@capsizecss/unpack" "^2.4.0"
+    "@oslojs/encoding" "^1.1.0"
+    "@rollup/pluginutils" "^5.1.4"
+    acorn "^8.14.1"
+    aria-query "^5.3.2"
+    axobject-query "^4.1.0"
+    boxen "8.0.1"
+    ci-info "^4.2.0"
+    clsx "^2.1.1"
+    common-ancestor-path "^1.0.1"
+    cookie "^1.0.2"
+    cssesc "^3.0.0"
+    debug "^4.4.0"
+    deterministic-object-hash "^2.0.2"
+    devalue "^5.1.1"
+    diff "^5.2.0"
+    dlv "^1.1.3"
+    dset "^3.1.4"
+    es-module-lexer "^1.6.0"
+    esbuild "^0.25.0"
+    estree-walker "^3.0.3"
+    flattie "^1.1.1"
+    fontace "~0.3.0"
+    github-slugger "^2.0.0"
+    html-escaper "3.0.3"
+    http-cache-semantics "^4.1.1"
+    js-yaml "^4.1.0"
+    kleur "^4.1.5"
+    magic-string "^0.30.17"
+    magicast "^0.3.5"
+    mrmime "^2.0.1"
+    neotraverse "^0.6.18"
+    p-limit "^6.2.0"
+    p-queue "^8.1.0"
+    package-manager-detector "^1.1.0"
+    picomatch "^4.0.2"
+    prompts "^2.4.2"
+    rehype "^13.0.2"
+    semver "^7.7.1"
+    shiki "^3.2.1"
+    tinyexec "^0.3.2"
+    tinyglobby "^0.2.12"
+    tsconfck "^3.1.5"
+    ultrahtml "^1.6.0"
+    unifont "~0.5.0"
+    unist-util-visit "^5.0.0"
+    unstorage "^1.15.0"
+    vfile "^6.0.3"
+    vite "^6.3.4"
+    vitefu "^1.0.6"
+    xxhash-wasm "^1.1.0"
+    yargs-parser "^21.1.1"
+    yocto-spinner "^0.2.1"
+    zod "^3.24.2"
+    zod-to-json-schema "^3.24.5"
+    zod-to-ts "^1.2.0"
+  optionalDependencies:
+    sharp "^0.33.3"
+
+astro@^5.2.5:
   version "5.7.5"
   resolved "https://registry.yarnpkg.com/astro/-/astro-5.7.5.tgz#ecea1cabf2909cd791bfc2d0616a0e5b045cb3af"
   integrity sha512-c59YuYiXyWWnUMOBlDczrjqKzF0dJQP20EP9vqDggcyKm//tEt9iJHNwoYq4r3UeO9UJCwlGK8FwaGTAwwF3IA==
@@ -2067,7 +2142,15 @@ flattie@^1.1.1:
   resolved "https://registry.yarnpkg.com/flattie/-/flattie-1.1.1.tgz#88182235723113667d36217fec55359275d6fe3d"
   integrity sha512-9UbaD6XdAL97+k/n+N7JwX46K/M6Zc6KcFYskrYL8wbBV/Uyk0CTAMY0VT+qiK5PM7AIc9aTWYtq65U7T+aCNQ==
 
-fontkit@^2.0.2:
+fontace@~0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/fontace/-/fontace-0.3.0.tgz#ddc16ff039d07330a87c9492cf264f121ce3847b"
+  integrity sha512-czoqATrcnxgWb/nAkfyIrRp6Q8biYj7nGnL6zfhTcX+JKKpWHFBnb8uNMw/kZr7u++3Y3wYSYoZgHkCcsuBpBg==
+  dependencies:
+    "@types/fontkit" "^2.0.8"
+    fontkit "^2.0.4"
+
+fontkit@^2.0.2, fontkit@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/fontkit/-/fontkit-2.0.4.tgz#4765d664c68b49b5d6feb6bd1051ee49d8ec5ab0"
   integrity sha512-syetQadaUEDNdxdugga9CpEYVaQIxOwk7GlwZWWZ19//qW4zE5bknOKeMBDYAASwnpaSHKJITRLMF9m1fp3s6g==
@@ -4070,6 +4153,14 @@ unifont@~0.2.0:
     css-tree "^3.0.0"
     ohash "^2.0.0"
 
+unifont@~0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/unifont/-/unifont-0.5.0.tgz#1c995b64cf6748468a5fa8431183f6bf10f23204"
+  integrity sha512-4DueXMP5Hy4n607sh+vJ+rajoLu778aU3GzqeTCqsD/EaUcvqZT9wPC8kgK6Vjh22ZskrxyRCR71FwNOaYn6jA==
+  dependencies:
+    css-tree "^3.0.0"
+    ohash "^2.0.0"
+
 unist-util-find-after@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/unist-util-find-after/-/unist-util-find-after-5.0.0.tgz#3fccc1b086b56f34c8b798e1ff90b5c54468e896"
@@ -4188,6 +4279,20 @@ vite@^6.2.6:
   version "6.3.3"
   resolved "https://registry.yarnpkg.com/vite/-/vite-6.3.3.tgz#497392c3f2243194e4dbf09ea83e9a3dddf49b88"
   integrity sha512-5nXH+QsELbFKhsEfWLkHrvgRpTdGJzqOZ+utSdmPTvwHmvU6ITTm3xx+mRusihkcI8GeC7lCDyn3kDtiki9scw==
+  dependencies:
+    esbuild "^0.25.0"
+    fdir "^6.4.4"
+    picomatch "^4.0.2"
+    postcss "^8.5.3"
+    rollup "^4.34.9"
+    tinyglobby "^0.2.13"
+  optionalDependencies:
+    fsevents "~2.3.3"
+
+vite@^6.3.4:
+  version "6.3.5"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-6.3.5.tgz#fec73879013c9c0128c8d284504c6d19410d12a3"
+  integrity sha512-cZn6NDFE7wdTpINgs++ZJ4N49W2vRp8LCKrn3Ob1kYNtOo21vfDoaV5GzBfLU4MovSAB8uNRm4jgzVQZ+mBzPQ==
   dependencies:
     esbuild "^0.25.0"
     fdir "^6.4.4"

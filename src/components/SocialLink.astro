@@ -4,27 +4,27 @@ const { type, href } = Astro.props;
 const platforms = {
   Discord: {
     color: '#5865F2',
-    icon: 'lucide:users',
+    icon: 'fa6-brands:discord',
   },
-  Twitter: {
+  'Twitter/X': {
     color: '#1DA1F2',
-    icon: 'lucide:twitter',
+    icon: 'fa6-brands:square-x-twitter',
   },
   Reddit: {
     color: '#FF4500',
-    icon: 'lucide:pen',
+    icon: 'fa6-brands:reddit',
   },
   BlueSky: {
     color: '#0085FF',
-    icon: 'lucide:cloud', // closest match, unless you have a BlueSky icon
+    icon: 'fa6-brands:bluesky',
   },
   Twitch: {
     color: '#9146FF',
-    icon: 'lucide:twitch',
+    icon: 'fa6-brands:twitch',
   },
   Youtube: {
     color: '#FF0000',
-    icon: 'lucide:youtube',
+    icon: 'fa6-brands:youtube',
   },
 };
 
@@ -38,7 +38,7 @@ const platform = platforms[type] ?? {
   <iconify-icon icon={platform.icon} width="20" height="20"></iconify-icon>
   <span>{type}</span>
 </a>
-<br/>
+
 
 <style>
     a {

@@ -10,12 +10,24 @@ homepage: 'https://unity.com/'
 officaldocs: 'https://docs.unity.com/'
 ---
 import TwitchCard from '../../components/TwitchCard.astro'
-import YouTubeLink from '../../components/YouTubeLink.astro'
+import SocialLink from '../../components/SocialLink.astro'
+import ResourceLink from '../../components/ResourceLink.astro'
+import CommissionLink from '../../components/CommissionLink.astro'
+import YouTubeCard from '../../components/YouTubeCard.astro'
+import { useState } from 'react'
 
 ---
 ### Official Links
 Unity is a powerful game engine that is widely used in the industry. It supports both 2D and 3D game development, making it a versatile choice for developers of all skill levels.
 
+<SocialLink type="Discord" href="discord.com/invite/unity" />
+<SocialLink type="Twitter/X" href="x.com/unity" />
+<SocialLink type="Reddit" href="reddit.com/r/Unity3D" />
+<SocialLink type="BlueSky" href="bsky.app/profile/unity.com" />
+<SocialLink type="Youtube" href="youtube.com/user/Unity3D" />
+
+
+---
 ### Streamers to watch for Unity Content
 All these streamers are active in the Unity community and have a wealth of knowledge to share. They often stream their work, so you can learn from them and ask any questions you might have.
 
@@ -24,3 +36,22 @@ All these streamers are active in the Unity community and have a wealth of knowl
 <TwitchCard username="clayman_dev"/>
 <TwitchCard username="Bardaky"/>
 <TwitchCard username="TheCaptainCoder"/>
+
+---
+### YouTube Channels to Check out for Unity Content
+All these channels have a wealth of knowledge to share. They often stream their work, so you can learn from them and ask any questions you might have.  
+<YouTubeCard username="Brackeys"/>
+<YouTubeCard username="GameDevHQ"/>
+<YouTubeCard username="CodeMonkey"/>
+
+---
+### Community Resources
+These resources are created by the community and are not officially affiliated with Unity. They can be a great way to learn more about the engine and find inspiration for your projects.
+<ResourceLink title="Unity Asset Store" href="https://assetstore.unity.com/" />
+
+---
+### Commissioned Work
+If you are looking for someone to help you with your Unity project, these creators are available for commission work. They have a wealth of experience and can help you with everything from game design to programming.
+
+---
+If you are a creator and would like to be featured on this page, please reach out to us on Discord or Twitter/X. We are always looking for new creators to feature and promote.

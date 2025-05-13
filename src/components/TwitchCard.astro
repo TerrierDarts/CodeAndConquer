@@ -100,12 +100,13 @@ try {
           class="profile-image"
         />
         <div>
-          <strong class="name">{user.display_name}</strong> -{" "}
+          <strong class="name">{user.display_name}</strong>{" "}
+          <span class={isLive ? "dot" : ""}>{isLive ? "🔴" : ""}</span> <span class={isLive ? "live" : ""}>{isLive ? "LIVE" : ""}</span>
+          <br />
           <span class="followers">Followers: {followData.total}</span>
           <br />
           <span class="description">{user.description}</i>
-          <br />
-          <span class={isLive ? "live" : ""}>{isLive ? "🔴 LIVE" : ""}</span>
+        
         </div>
       </div>
     </a>
@@ -193,9 +194,13 @@ try {
     text-decoration: none;
   }
 
-  .live {
+  .dot {
     color: red;
     font-weight: bold;
-    animation: blink 3s infinite;
+    animation: blink 2s infinite;
+  }
+   .live {
+    color: red;
+    font-weight: bold;
   }
 </style>

@@ -10,14 +10,42 @@ homepage: 'https://obsproject.com/'
 officaldocs: 'https://docs.obsproject.com/'
 ---
 import TwitchCard from '../../components/TwitchCard.astro'
-import YouTubeLink from '../../components/YouTubeLink.astro'
+import SocialLink from '../../components/SocialLink.astro'
+import ResourceLink from '../../components/ResourceLink.astro'
+import CommissionLink from '../../components/CommissionLink.astro'
+import YouTubeCard from '../../components/YouTubeCard.astro'
+import { useState } from 'react'
 
 ---
 ### Official Links
 OBS Studio is a free and open-source software for video recording and live streaming. It is widely used by content creators, streamers, and gamers to capture and broadcast their gameplay, tutorials, and other content.
+<SocialLink type="Discord" href="discord.gg/obsproject" />
+<SocialLink type="Twitter/X" href="twitter.com/OBSProject" />
+<SocialLink type="Reddit" href="reddit.com/r/obs" />
+<SocialLink type="BlueSky" href="bsky.app/profile/obsproject.com" />
 
+---
 ### Streamers to watch for OBS Content
 All these streamers are active in the OBS community and have a wealth of knowledge to share. They often stream their work, so you can learn from them and ask any questions you might have.
 
 <TwitchCard username="FiniteSingularity"/>
 <TwitchCard username="Exeldro"/>
+
+---
+### YouTube Channels to Check out for OBS Content
+All these channels have a wealth of knowledge to share. They often stream their work, so you can learn from them and ask any questions you might have.
+<YouTubeCard username="Andilippi"/>
+
+---
+### Community Resources
+These resources are created by the community and are not officially affiliated with OBS. They can be a great way to learn more about the software and find inspiration for your projects.
+<ResourceLink title="OBS Studio Plugins" href="https://obsproject.com/forum/resources/" />
+<ResourceLink title="OBS Raw Generator" href="https://obs-raw.streamer.bot/" />
+
+---
+### Commissioned Work
+If you are looking for someone to help you with your OBS project, these creators are available for commission work. They have a wealth of experience and can help you with everything from video editing to live streaming.
+<CommissionLink title="Exeldro" href="https://exeldro.com/" />
+
+---
+If you are a creator and would like to be featured on this page, please reach out to us on Discord or Twitter/X. We are always looking for new creators to feature and promote.

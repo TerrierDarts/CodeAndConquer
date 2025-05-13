@@ -11,13 +11,13 @@
     "publish": "npm run build && npx wrangler pages deploy dist"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.5.1",
-    "@astrojs/db": "^0.14.12",
-    "@astrojs/mdx": "^4.2.5",
+    "@astrojs/cloudflare": "12.5.2",
+    "@astrojs/db": "0.14.13",
+    "@astrojs/mdx": "4.2.6",
     "@astrojs/node": "^9.2.1",
     "@jam-comments/astro": "^2.8.3",
     "@supabase/supabase-js": "^2.49.4",
-    "astro": "^5.7.5",
+    "astro": "5.7.12",
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.7",
     "react": "^19.1.0",

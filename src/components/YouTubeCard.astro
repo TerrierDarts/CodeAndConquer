@@ -1,23 +1,24 @@
 ---
 export interface Props {
-  title: string;
-  link: string;
+  username: string;
 }
 
-const { title, link } = Astro.props;
+const { username } = Astro.props;
 
 const platform = {
-  color: '#999',
-  icon: 'lucide:link',
+   color: '#FF0000',
+    icon: 'fa6-brands:youtube',
 };
 ---
 
 <div class="twitch-card">
   <div class="card-content">
-      <iconify-icon icon={platform.icon} width="30" height="30"></iconify-icon>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <span>{title}</span>
-      </a>
+      <iconify-icon icon={platform.icon} style={`color: ${platform.color}`} width="30" height="30"></iconify-icon>
+      <a href={`https://youtube.com/@${username}`} target="_blank">
+    <span>
+      {username}
+    </span>
+  </a>
     </div>
   </div>
   
@@ -53,7 +54,8 @@ const platform = {
       font-family: var(--body);
       font-weight: bold;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
+      vertical-align: top;
     }
   
     .card-content a:hover {
