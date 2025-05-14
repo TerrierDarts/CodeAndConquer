@@ -1,31 +1,36 @@
 ---
-const pathname = Astro.url.pathname.replace('/blog/', '').replace('/', '');
+export const prerender = false; // Ensure this runs on-demand
+
+// Get the current path to use as the key in KV
+const path = Astro.url.pathname;
+
+// Access the KV namespace from runtime
+const { PAGE_VIEWS } = Astro.locals.runtime.env;
+
+// Get current view count
+let views = 0;
+try {
+  const storedViews = await PAGE_VIEWS.get(path);
+  views = storedViews ? parseInt(storedViews) : 0;
+  
+  // Increment the view count
+  await PAGE_VIEWS.put(path, (views + 1).toString());
+} catch (error) {
+  console.error('Error accessing page views:', error);
+}
 ---
 
-<span class="badge badge--item">PAGE VIEWS:</span> <span id="views">...</span>
 
-<script type="module">
-  const pathname = window.location.pathname.replace('/blog/', '').replace('/', '');
+<div class="page-view-counter">
+    <span class="badge badge--item">PAGE VIEWS:</span>{views} 
+</div>
 
-  async function updateViews() {
-    try {
-      await fetch('/api/views.json', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ pathname }),
-      });
-
-      const res = await fetch(`/api/views.json?pathname=${pathname}`);
-      const data = await res.json();
-
-      const viewsElement = document.getElementById('views');
-      if (viewsElement) {
-        viewsElement.textContent = data.views;
-      }
-    } catch (err) {
-      console.error('Failed to update views', err);
-    }
+<style>
+  .page-views {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #f4f4f4;
+    font-size: 0.875rem;
   }
-
-  updateViews();
-</script>
+</style>

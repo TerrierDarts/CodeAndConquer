@@ -4,6 +4,7 @@ import dayjs from "dayjs";
 const { frontmatter } = Astro.props;
 import PostComments from "../components/PostComments.astro";
 import PageView from "../components/PageView.astro";
+import PageViews from "../components/PageViews.astro";
 ---
 
 <BaseLayout pageTitle={frontmatter.title} description={frontmatter.description}>
@@ -20,27 +21,26 @@ import PageView from "../components/PageView.astro";
     
     <ul class="badge__list">
         <li>
-            <span class="badge badge--item">Last Updated:</span>
+            <span class="badge badge--item">LAST UPDATED:</span>
             {dayjs(frontmatter.date).format("DD-MMMM-YYYY")}
         </li>
         <li>
-            <span class="badge badge--item">Home Page:</span> <a
+            <span class="badge badge--item">HOME PAGE:</span> <a
                 class="badge__link"
                 href={frontmatter.homepage}
                 target="_blank">{frontmatter.homepage}</a
             >
         </li>
         <li>
-            <span class="badge badge--item">Offical Docs:</span> <a
+            <span class="badge badge--item">OFFICIAL DOCS:</span> <a
                 class="badge__link"
                 href={frontmatter.officaldocs}
                 target="_blank">{frontmatter.officaldocs}</a
             >
         </li>
-        <li>
-        
-            
-          </li>
+         <li>
+      <PageViews />
+    </li>
     </ul>
 
     <slot />

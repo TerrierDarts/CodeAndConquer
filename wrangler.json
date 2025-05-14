@@ -1,8 +1,12 @@
-  {
+ {
     "name": "codeandconquer",
-    "compatibility_date": "2023-10-30",
+    "compatibility_date": "2025-05-14",
     "kv_namespaces": [
       {
+        "binding": "PAGE_VIEWS",
+        "id": "a28a081a25df4169ad539340245873b0"
+      },
+       {
         "binding": "SESSION",
         "id": "864f8f7891794c01b0e05cbcc5acee54"
       }
